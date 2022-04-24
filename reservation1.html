@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Make Reservation -->
+    <div class="container">
+        <div>
+            <div class="row ">
+                <div class="col text-center ">
+                    <div class="jumbotron">
+                        <h3>Make Reservation</h3>
+                        <div class="col text-center ">
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#openModal">Confirm
+                                Reservation</button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center py-5">
+                                <h3>Saved Reservations</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">First Name</th>
+                                        <th class="text-center">Last Name</th>
+                                        <th class="text-center">Number of Party</th>
+                                        <th class="text-center">Phone Number</th>
+                                        <th class="text-center">Date</th>
+                                        <th class="text-center">Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="openModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Reservation</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="first-name-form" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="first-name-form" placeholder="First Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="last-name-form" class="form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="last-name-form" placeholder="Last Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone-number-form" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="phone-number-form" placeholder="Phone Number" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="party-number-form" class="form-label">Number of Party:</label>
+                            <input type="text" class="form-control" id="party-number-form"
+                                placeholder="Number of Party" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="date-form" class="form-label">Date:</label>
+                            <input type="text" class="form-control" id="date-form" placeholder="Ex: 8/11/22" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="time-form" class="form-label">Time:</label>
+                            <input type="text" class="form-control" id="time-form" placeholder="Ex: 6:00PM" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="saveReservation()"
+                        data-bs-dismiss="modal">Add
+                        Reservation</button>
+                    <button type="button" class="btn btn-success btn-sm" onclick="saveChanges()"
+                        data-bs-dismiss="modal">Save
+                        Changes</button>
+                    <button type="button" class="btn btn-warning btn-sm" onclick="clearForm()">Clear
+                        Field</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
